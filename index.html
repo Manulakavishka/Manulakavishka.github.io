@@ -28,13 +28,25 @@
             color: var(--text-color);
             background-color: var(--background-color);
             overflow-x: hidden;
+            padding-top: 80px; /* Adjust based on your header’s height */
         }
+        /* Additional adjustment for small screens if needed */
+@media (max-width: 768px) {
+    body {
+        padding-top: 100px; /* Increase this value if the header becomes taller */
+    }
+    header {
+        padding: 0.5rem 0; /* Reduce header padding on smaller screens */
+    }
+}
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        /* Adjust container width for better responsiveness */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem; /* Added padding to prevent content from touching the screen edges */
+}
 
         header {
             background-color: rgba(255, 255, 255, 0.8);
@@ -113,6 +125,47 @@
         nav ul li a:hover::after {
             width: 100%;
         }
+
+        /* Responsive header adjustments for 3-column, 2-row layout */
+@media (max-width: 768px) {
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 1rem; /* Adjust gap between items */
+        padding: 0; /* Remove extra padding if any */
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+    }
+    nav ul li {
+        margin: 0; /* Remove extra margin */
+    }
+    header {
+        padding: 1rem 0; /* Adjust padding for smaller screens */
+    }
+}
+
+
+/* Responsive adjustments for main sections */
+@media (max-width: 576px) {
+    .about, .contact-grid, .project-grid, .skills-grid, .experience-list {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Adjust skill bars and buttons for smaller screens */
+@media (max-width: 576px) {
+    .skill-item h3, .btn, .contact-form input, .contact-form textarea {
+        font-size: 0.9rem; /* Smaller text size for readability */
+    }
+    .btn {
+        padding: 0.6rem 1.2rem; /* Smaller buttons on small screens */
+    }
+}
 
         section {
             padding: 6rem 0;
@@ -571,18 +624,35 @@
 
         @media (min-width: 400px) {
             .certificates-grid {
-                grid-template-columns: repeat(1, minmax(0, 1fr));
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                width: 100%;
+                padding: 0%;
+            }
+        }
+        @media (min-width: 768px) {
+            .certificates-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                width: 210%;
                 padding: 0%;
             }
         }
 
         @media (min-width: 1024px) {
             .certificates-grid {
-                grid-template-columns: repeat(1, minmax(0, 1fr));
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(1024px, 1fr));
+                width: 300%;
                 padding: 28%;
             }
         }
 
+        /* .experience-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        } */
 
         .certificate-item {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
