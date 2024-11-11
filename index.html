@@ -704,6 +704,107 @@
             animation: fadeInUp 0.5s ease forwards;
             opacity: 0;
         }
+
+
+        /* Adjust these existing media queries and add new ones */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 140px; /* Increase top padding to prevent content overlap with header */
+            }
+
+            header {
+                padding: 0.5rem;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+                padding: 0.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .about {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem 1rem;
+            }
+
+            .about-content, .about-image {
+                width: 100%;
+            }
+
+            /* Adjust the buttons in the about section */
+            .about-content div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content .btn {
+                width: 80%; /* Make buttons wider but not full width */
+                margin: 0.5rem 0; /* Add vertical margin between buttons */
+            }
+
+            /* Adjust the certificates section for mobile */
+            .certificates-grid {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 0 1rem; /* Add horizontal padding */
+            }
+
+            .certificate-item {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .certificate-item img {
+                width: 100%;
+                height: auto; /* Allow height to adjust proportionally */
+                object-fit: contain; /* Ensure the full image is visible */
+            }
+
+            .certificate-item .content {
+                padding: 1rem;
+            }
+
+            .certificate-item h4 {
+                font-size: 1rem; /* Reduce font size for mobile */
+            }
+
+            .certificate-item p {
+                font-size: 0.875rem; /* Reduce font size for mobile */
+            }
+        }
+
+        /* Additional adjustments for very small screens */
+        @media (max-width: 480px) {
+            body {
+                padding-top: 160px; /* Further increase top padding for very small screens */
+            }
+
+            h1 {
+                font-size: 2rem; /* Reduce h1 size for very small screens */
+            }
+
+            h2 {
+                font-size: 1.75rem; /* Reduce h2 size for very small screens */
+            }
+
+            .about-content .btn {
+                width: 100%; /* Make buttons full width on very small screens */
+            }
+        }
     </style>
 </head>
 
