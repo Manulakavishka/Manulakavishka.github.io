@@ -46,7 +46,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem; /* Added padding to prevent content from touching the screen edges */
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
         header {
@@ -224,6 +224,7 @@
             transform: translateX(-50%);
         }
 
+        /* Update the button styles */
         .btn {
             display: inline-block;
             padding: 0.8rem 1.5rem;
@@ -239,6 +240,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         .btn:hover {
@@ -649,12 +651,6 @@
             }
         }
 
-        /* .experience-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        } */
-
         .certificate-item {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -804,6 +800,43 @@
 
             .about-content .btn {
                 width: 100%; /* Make buttons full width on very small screens */
+            }
+        }
+
+        /* Adjust the about section for mobile */
+        @media (max-width: 768px) {
+            .about-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content > div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                max-width: 300px; /* Limit the width of the button container */
+            }
+
+            .about-content .btn {
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+
+            /* Ensure consistent height for both buttons */
+            .about-content .btn,
+            .about-content .btn-outline {
+                height: 50px;
+                line-height: 46px; /* Adjust line height to vertically center text */
+                padding: 0 1.5rem;
+            }
+        }
+
+        /* Additional adjustments for very small screens */
+        @media (max-width: 480px) {
+            .about-content > div {
+                max-width: 250px; /* Further limit the width for very small screens */
             }
         }
     </style>
