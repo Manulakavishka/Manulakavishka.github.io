@@ -28,26 +28,32 @@
             color: var(--text-color);
             background-color: var(--background-color);
             overflow-x: hidden;
-            padding-top: 80px; /* Adjust based on your header’s height */
+            padding-top: 80px;
+            /* Adjust based on your header’s height */
         }
+
         /* Additional adjustment for small screens if needed */
-@media (max-width: 768px) {
-    body {
-        padding-top: 100px; /* Increase this value if the header becomes taller */
-    }
-    header {
-        padding: 0.5rem 0; /* Reduce header padding on smaller screens */
-    }
-}
+        @media (max-width: 768px) {
+            body {
+                padding-top: 100px;
+                /* Increase this value if the header becomes taller */
+            }
+
+            header {
+                padding: 0.5rem 0;
+                /* Reduce header padding on smaller screens */
+            }
+        }
 
         /* Adjust container width for better responsiveness */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem; /* Added padding to prevent content from touching the screen edges */
-    padding-top: 70px;
-}
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            /* Added padding to prevent content from touching the screen edges */
+            padding-top: 70px;
+        }
 
         header {
             background-color: rgba(255, 255, 255, 0.8);
@@ -128,45 +134,66 @@
         }
 
         /* Responsive header adjustments for 3-column, 2-row layout */
-@media (max-width: 768px) {
-    nav ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 columns */
-        gap: 1rem; /* Adjust gap between items */
-        padding: 0; /* Remove extra padding if any */
-        align-items: center;
-        justify-items: center;
-        text-align: center;
-    }
-    nav ul li {
-        margin: 0; /* Remove extra margin */
-    }
-    header {
-        padding: 1rem 0; /* Adjust padding for smaller screens */
-    }
-}
+        @media (max-width: 768px) {
+            nav ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                /* 3 columns */
+                gap: 1rem;
+                /* Adjust gap between items */
+                padding: 0;
+                /* Remove extra padding if any */
+                align-items: center;
+                justify-items: center;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 0;
+                /* Remove extra margin */
+            }
+
+            header {
+                padding: 1rem 0;
+                /* Adjust padding for smaller screens */
+            }
+        }
 
 
-/* Responsive adjustments for main sections */
-@media (max-width: 576px) {
-    .about, .contact-grid, .project-grid, .skills-grid, .experience-list {
-        grid-template-columns: 1fr; /* Single column for small screens */
-    }
-    .about {
-        flex-direction: column;
-        text-align: center;
-    }
-}
+        /* Responsive adjustments for main sections */
+        @media (max-width: 576px) {
 
-/* Adjust skill bars and buttons for smaller screens */
-@media (max-width: 576px) {
-    .skill-item h3, .btn, .contact-form input, .contact-form textarea {
-        font-size: 0.9rem; /* Smaller text size for readability */
-    }
-    .btn {
-        padding: 0.6rem 1.2rem; /* Smaller buttons on small screens */
-    }
-}
+            .about,
+            .contact-grid,
+            .project-grid,
+            .skills-grid,
+            .experience-list {
+                grid-template-columns: 1fr;
+                /* Single column for small screens */
+            }
+
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Adjust skill bars and buttons for smaller screens */
+        @media (max-width: 576px) {
+
+            .skill-item h3,
+            .btn,
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 0.9rem;
+                /* Smaller text size for readability */
+            }
+
+            .btn {
+                padding: 0.6rem 1.2rem;
+                /* Smaller buttons on small screens */
+            }
+        }
 
         section {
             padding: 6rem 0;
@@ -633,6 +660,7 @@
                 padding: 0%;
             }
         }
+
         @media (min-width: 768px) {
             .certificates-grid {
                 display: grid;
@@ -706,7 +734,8 @@
         /* Adjust these existing media queries and add new ones */
         @media (max-width: 768px) {
             body {
-                padding-top: 140px; /* Increase top padding to prevent content overlap with header */
+                padding-top: 140px;
+                /* Increase top padding to prevent content overlap with header */
             }
 
             header {
@@ -735,7 +764,8 @@
                 padding: 2rem 1rem;
             }
 
-            .about-content, .about-image {
+            .about-content,
+            .about-image {
                 width: 100%;
             }
 
@@ -747,8 +777,10 @@
             }
 
             .about-content .btn {
-                width: 80%; /* Make buttons wider but not full width */
-                margin: 0.5rem 0; /* Add vertical margin between buttons */
+                width: 80%;
+                /* Make buttons wider but not full width */
+                margin: 0.5rem 0;
+                /* Add vertical margin between buttons */
             }
 
             /* Adjust the certificates section for mobile */
@@ -757,7 +789,8 @@
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
-                padding: 0 1rem; /* Add horizontal padding */
+                padding: 0 1rem;
+                /* Add horizontal padding */
             }
 
             .certificate-item {
@@ -767,8 +800,10 @@
 
             .certificate-item img {
                 width: 100%;
-                height: auto; /* Allow height to adjust proportionally */
-                object-fit: contain; /* Ensure the full image is visible */
+                height: auto;
+                /* Allow height to adjust proportionally */
+                object-fit: contain;
+                /* Ensure the full image is visible */
             }
 
             .certificate-item .content {
@@ -776,30 +811,36 @@
             }
 
             .certificate-item h4 {
-                font-size: 1rem; /* Reduce font size for mobile */
+                font-size: 1rem;
+                /* Reduce font size for mobile */
             }
 
             .certificate-item p {
-                font-size: 0.875rem; /* Reduce font size for mobile */
+                font-size: 0.875rem;
+                /* Reduce font size for mobile */
             }
         }
 
         /* Additional adjustments for very small screens */
         @media (max-width: 480px) {
             body {
-                padding-top: 160px; /* Further increase top padding for very small screens */
+                padding-top: 160px;
+                /* Further increase top padding for very small screens */
             }
 
             h1 {
-                font-size: 2rem; /* Reduce h1 size for very small screens */
+                font-size: 2rem;
+                /* Reduce h1 size for very small screens */
             }
 
             h2 {
-                font-size: 1.75rem; /* Reduce h2 size for very small screens */
+                font-size: 1.75rem;
+                /* Reduce h2 size for very small screens */
             }
 
             .about-content .btn {
-                width: 100%; /* Make buttons full width on very small screens */
+                width: 100%;
+                /* Make buttons full width on very small screens */
             }
         }
 
@@ -811,12 +852,13 @@
                 align-items: center;
             }
 
-            .about-content > div {
+            .about-content>div {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
-                max-width: 300px; /* Limit the width of the button container */
+                max-width: 300px;
+                /* Limit the width of the button container */
             }
 
             .about-content .btn {
@@ -828,15 +870,17 @@
             .about-content .btn,
             .about-content .btn-outline {
                 height: 50px;
-                line-height: 46px; /* Adjust line height to vertically center text */
+                line-height: 46px;
+                /* Adjust line height to vertically center text */
                 padding: 0 1.5rem;
             }
         }
 
         /* Additional adjustments for very small screens */
         @media (max-width: 480px) {
-            .about-content > div {
-                max-width: 250px; /* Further limit the width for very small screens */
+            .about-content>div {
+                max-width: 250px;
+                /* Further limit the width for very small screens */
             }
         }
     </style>
@@ -1157,12 +1201,14 @@
             <h2>Featured Projects</h2>
             <div class="project-grid">
                 <div class="project-card animate-fade-up">
-                    <img src="assets/2023-01-11_140421.png"
-                        alt="E-Commerce Application For HappyCart Using PHP">
+                    <img src="assets/2023-01-11_140421.png" alt="E-Commerce Application For HappyCart Using PHP">
                     <div class="project-info">
                         <h3>E-Commerce Application For HappyCart Using PHP</h3>
-                        <p>HappyCart is a full-featured e-commerce platform designed to make online shopping easy and enjoyable for customers while giving administrators comprehensive control over product management and order processing.</p>
-                        <a href="https://github.com/Manulakavishka/E-Commerce-Application-For-HappyCart-Using-PHP" class="btn">View Project</a>
+                        <p>HappyCart is a full-featured e-commerce platform designed to make online shopping easy and
+                            enjoyable for customers while giving administrators comprehensive control over product
+                            management and order processing.</p>
+                        <a href="https://github.com/Manulakavishka/E-Commerce-Application-For-HappyCart-Using-PHP"
+                            class="btn">View Project</a>
                     </div>
                 </div>
                 <div class="project-card animate-fade-up">
@@ -1170,17 +1216,34 @@
                         alt="M-Commerce Application For HappyCart Using Java (Android)">
                     <div class="project-info">
                         <h3>M-Commerce Application For HappyCart Using Java (Android)</h3>
-                        <p>This is a mobile commerce (M-Commerce) application built for Android using Java. It provides a seamless shopping experience for customers on mobile devices and a robust admin interface for managing products, orders, and user interactions.</p>
-                        <a href="https://github.com/Manulakavishka/M-Commerce-Application-For-HappyCart-Using-Java-Android" class="btn">View Project</a>
+                        <p>This is a mobile commerce (M-Commerce) application built for Android using Java. It provides
+                            a seamless shopping experience for customers on mobile devices and a robust admin interface
+                            for managing products, orders, and user interactions.</p>
+                        <a href="https://github.com/Manulakavishka/M-Commerce-Application-For-HappyCart-Using-Java-Android"
+                            class="btn">View Project</a>
                     </div>
                 </div>
                 <div class="project-card animate-fade-up">
-                    <img src="assets/3.JPG"
-                        alt="Adyapana - Standalone Educational Application">
+                    <img src="assets/3.JPG" alt="Standalone application For Adyapana Using Java">
                     <div class="project-info">
-                        <h3>Adyapana - Standalone Educational Application</h3>
-                        <p>This is a standalone educational application built with Java that provides interactive learning modules, quizzes, and educational resources for students. The application is designed to enhance learning efficiency and help users easily access educational content on their desktops or laptops.</p>
-                        <a href="https://github.com/Manulakavishka/Standalone-application-For-Adyapana-Using-Java" class="btn">View Project</a>
+                        <h3>Standalone application For Adyapana Using Java</h3>
+                        <p>This is a standalone educational application built with Java that provides interactive
+                            learning modules, quizzes, and educational resources for students. The application is
+                            designed to enhance learning efficiency and help users easily access educational content on
+                            their desktops or laptops.</p>
+                        <a href="https://github.com/Manulakavishka/Standalone-application-For-Adyapana-Using-Java"
+                            class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card animate-fade-up">
+                    <img src="assets/Home.JPG" alt="Standalone application For Hospital Using Java">
+                    <div class="project-info">
+                        <h3>Standalone application For Hospital Using Java</h3>
+                        <p>This is a standalone Java application designed to manage hospital operations, including
+                            patient registration, doctor scheduling, billing, and report generation. This guide provides
+                            step-by-step instructions for installing and running the HMS application on your system.</p>
+                        <a href="https://github.com/Manulakavishka/Standalone-application-For-Hospital-Using-Java"
+                            class="btn">View Project</a>
                     </div>
                 </div>
             </div>
